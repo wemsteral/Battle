@@ -1,8 +1,10 @@
 require 'sinatra/base'
 
 
-class Battle < Sinatra::Base
 
+class Battle < Sinatra::Base
+  
+  set :session_secret, 'super secret'
   enable :sessions
 
   get '/test' do
